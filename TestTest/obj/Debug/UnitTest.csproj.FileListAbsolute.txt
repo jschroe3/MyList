@@ -1,0 +1,1 @@
+c:\Users\J2\Documents\Visual Studio 2015\Projects\MyList\TestTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
