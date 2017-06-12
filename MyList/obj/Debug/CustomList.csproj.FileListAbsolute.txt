@@ -1,0 +1,6 @@
+c:\Users\J2\Documents\Visual Studio 2015\Projects\MyList\MyList\obj\Debug\CustomList.csprojResolveAssemblyReference.cache
+c:\Users\J2\Documents\Visual Studio 2015\Projects\MyList\MyList\bin\Debug\MyList.exe.config
+c:\Users\J2\Documents\Visual Studio 2015\Projects\MyList\MyList\bin\Debug\MyList.exe
+c:\Users\J2\Documents\Visual Studio 2015\Projects\MyList\MyList\bin\Debug\MyList.pdb
+c:\Users\J2\Documents\Visual Studio 2015\Projects\MyList\MyList\obj\Debug\MyList.exe
+c:\Users\J2\Documents\Visual Studio 2015\Projects\MyList\MyList\obj\Debug\MyList.pdb
