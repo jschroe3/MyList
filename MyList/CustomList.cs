@@ -30,13 +30,13 @@ namespace MyList
             {
                 if (count == capacity)
                 {
-                    Expand();
+                    Grow();
                 }
                 array[count] = item;
                 count++;
             }
 
-            public void Expand()
+            public void Grow()
             {
                 T[] tempArray = new T[capacity *= 2];
                 for (int i = 0; i < count; i++)
@@ -52,16 +52,17 @@ namespace MyList
                 {
                     if (item.Equals(array[i]))
                     {
-                        if (array[i].Equals(array[count - 1])) { array[i] = default(T); count--; return true; }
+                        if (array[i].Equals(array[count - 1]))
+                        { array[i] = default(T); count--; return true; }
                         count--;
-                        Shift(i);
+                        MoveIt(i);
                         return true;
                     }
                 }
                 return false;
             }
 
-            public void Shift(int position)
+            public void MoveIt(int position)
             {
                 for (int k = position; k < count; k++)
                 {
@@ -94,25 +95,25 @@ namespace MyList
 
             public static CustomList<T> operator -(CustomList<T> firstArray, CustomList<T> secondArray)
             {
-                CustomList<T> thirdArray = new CustomList<T>();
+                CustomList<T> tempArray = new CustomList<T>();
                 for (int i = 0; i < firstArray.count; i++)
                 {
-                    thirdArray[i] = firstArray[i];
-                    thirdArray.count++;
+                    tempArray[i] = firstArray[i];
+                    tempArray.count++;
                 }
-                for (int t = 0; t < thirdArray.count; t++)
+                for (int t = 0; t < tempArray.count; t++)
                 {
                     for (int k = 0; k < secondArray.count; k++)
                     {
-                        if (thirdArray[t].Equals(secondArray[k]))
+                        if (tempArray[t].Equals(secondArray[k]))
                         {
-                            thirdArray.Remove(thirdArray[t]);
+                            tempArray.Remove(tempArray[t]);
                             t--;
                             break;
                         }
                     }
                 }
-                return thirdArray;
+                return tempArray;
             }
 
             public override string ToString()
@@ -140,7 +141,7 @@ namespace MyList
                 {
                     while (i >= capacity)
                     {
-                        Expand();
+                        Grow();
                     }
                 }
                 array[i] = value;
