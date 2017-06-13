@@ -37,49 +37,49 @@ namespace UnitTestProject1
             //Arrange
             int number = 1;
             int expected = 1;
-         //Act
+            //Act
             CustomList<int> list = new CustomList<int>() { number };
-         //Assert
+            //Assert
             Assert.AreEqual(expected, list[0]);
         }
         [TestMethod]
         public void Add_Int_Initializer_Count()
         {
-          //Arrange
+            //Arrange
             int number = 1;
             int expected = 1;
-           //Act
+            //Act
             CustomList<int> list = new CustomList<int>() { number };
-           //Assert
+            //Assert
             Assert.AreEqual(expected, list.Count);
         }
-   //Add and Remove Tests.
+        //Add and Remove Tests.
 
         [TestMethod]
         public void Add1()
-         {
-           //Arrange
-             CustomList<int> list = new CustomList<int>();
-             int number = 1;
-             int expected = 1;
-           //Act
-             list.Add(number);
-           //Assert
-             Assert.AreEqual(expected, list[0]);
-            }
-       
-            [TestMethod]
-            public void Add2()
-            {
-           //Arrange
-              CustomList<int> list = new CustomList<int>() { 1, 2, 3, 4 };
-              int number = 5;
-              int expected = 1;
-           //Act
-              list.Add(number);
-           //Assert
-              Assert.AreEqual(expected, list[0]);
-            }
+        {
+            //Arrange
+            CustomList<int> list = new CustomList<int>();
+            int number = 1;
+            int expected = 1;
+            //Act
+            list.Add(number);
+            //Assert
+            Assert.AreEqual(expected, list[0]);
+        }
+
+        [TestMethod]
+        public void Add2()
+        {
+            //Arrange
+            CustomList<int> list = new CustomList<int>() { 1, 2, 3, 4 };
+            int number = 5;
+            int expected = 1;
+            //Act
+            list.Add(number);
+            //Assert
+            Assert.AreEqual(expected, list[0]);
+        }
         [TestMethod]
         public void Add7()
         {
@@ -117,17 +117,17 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, list[0]);
         }
         [TestMethod]
-            public void Add3()
-            {
-           //Arrange
-              CustomList<int> list = new CustomList<int>() { 1, 2, 3, 4 };
-              int number = 5;
-              int expected = 4;
-           //Act
-              list.Add(number);
-           //Assert
-              Assert.AreEqual(expected, list[3]);
-            }
+        public void Add3()
+        {
+            //Arrange
+            CustomList<int> list = new CustomList<int>() { 1, 2, 3, 4 };
+            int number = 5;
+            int expected = 4;
+            //Act
+            list.Add(number);
+            //Assert
+            Assert.AreEqual(expected, list[3]);
+        }
         [TestMethod]
         public void Add5()
         {
@@ -154,30 +154,30 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-            public void AddIndexTwoInitializerCount()
-            {
-           //Arrange
-              int number1 = 1;
-              int number2 = 2;
-              int expected = 2;
-           //Act
-              CustomList<int> list = new CustomList<int>() { number1, number2 };
-           //Assert
-              Assert.AreEqual(expected, list.Count);
-            }
-
-            [TestMethod]
-            public void AddIndexTwoInitializer2()
-            {
+        public void AddIndexTwoInitializerCount()
+        {
             //Arrange
-              int number1 = 1;
-              int number2 = 2;
-              int expected = 1;
+            int number1 = 1;
+            int number2 = 2;
+            int expected = 2;
             //Act
-              CustomList<int> list = new CustomList<int>() { number1, number2 };
+            CustomList<int> list = new CustomList<int>() { number1, number2 };
             //Assert
-              Assert.AreEqual(expected, list[0]);
-            }
+            Assert.AreEqual(expected, list.Count);
+        }
+
+        [TestMethod]
+        public void AddIndexTwoInitializer2()
+        {
+            //Arrange
+            int number1 = 1;
+            int number2 = 2;
+            int expected = 1;
+            //Act
+            CustomList<int> list = new CustomList<int>() { number1, number2 };
+            //Assert
+            Assert.AreEqual(expected, list[0]);
+        }
 
         [TestMethod]
         public void DeleteCount()
@@ -187,60 +187,10 @@ namespace UnitTestProject1
             int number = 1;
             int expected = 0;
             //Act
-              list.Remove(number);
-            //Assert
-              Assert.AreEqual(expected, list.Count);
-            }
-        [TestMethod]
-        public void DeleteCount2()
-        {
-            //Arrange
-            CustomList<int> list = new CustomList<int>() { 1, 2, 3 };
-            int number = 1;
-            int expected = 2;
-            //Act
             list.Remove(number);
             //Assert
             Assert.AreEqual(expected, list.Count);
         }
-        [TestMethod]
-            public void DeleteCount3()
-            {
-            //Arrange
-            CustomList<int> list = new CustomList<int>() { 1, 2, 3, 4 };
-            int number = 1;
-            int expected = 3;
-            //Act
-            list.Remove(number);
-            //Assert
-             Assert.AreEqual(expected, list.Count);
-            }
-        [TestMethod]
-        public void DeleteCount4()
-        {
-            //Arrange
-            CustomList<int> list = new CustomList<int>() { 1, 2, 3, 4, 5 };
-            int number = 1;
-            int expected = 4;
-            //Act
-            list.Remove(number);
-            //Assert
-            Assert.AreEqual(expected, list.Count);
-        }
-        [TestMethod]
-        public void DeleteCount5()
-        {
-            //Arrange
-            CustomList<int> list = new CustomList<int>() { 1, 2 };
-            int number = 1;
-            int expected = 1;
-            //Act
-            list.Remove(number);
-            //Assert
-            Assert.AreEqual(expected, list.Count);
-        }
-
-        
         [TestMethod]
         public void DeleteInt9()
         {
@@ -301,7 +251,7 @@ namespace UnitTestProject1
             //Assert
             Assert.AreEqual(expected, list[0]);
         }
-        
+
         [TestMethod]
         public void DeleteInt6()
         {
@@ -313,43 +263,6 @@ namespace UnitTestProject1
             list.Remove(number);
             //Assert
             Assert.AreEqual(expected, list[0]);
-        }
-        [TestMethod]
-            public void DeleteInt3()
-            {
-                //Arrange
-                CustomList<int> list = new CustomList<int>() { 1, 2, 3, 4 };
-                int number = 1;
-                int expected = 4;
-                //Act
-                list.Remove(number);
-                //Assert
-                Assert.AreEqual(expected, list[2]);
-            }
-        [TestMethod]
-        public void DeleteInt14()
-        {
-            //Arrange
-            CustomList<int> list = new CustomList<int>() { 1, 2, 3, 4 };
-            int number = 2;
-            int expected = 4;
-            //Act
-            list.Remove(number);
-            //Assert
-            Assert.AreEqual(expected, list[2]);
-        }
-
-        [TestMethod]
-        public void DeleteInt4()
-        {
-            //Arrange
-            CustomList<int> list = new CustomList<int>() { 1, 2, 3, 4 };
-            int number = 3;
-            int expected = 4;
-            //Act
-            list.Remove(number);
-            //Assert
-            Assert.AreEqual(expected, list[2]);
         }
         [TestMethod]
         public void DeleteInt15()
@@ -376,18 +289,18 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, list[2]);
         }
         [TestMethod]
-            public void DeleteInt5()
-            {
-                //Arrange
-                CustomList<int> list = new CustomList<int>() { 1, 2, 3, 4 };
-                int number = 3;
-                int expected = 1;
-                //Act
-                list.Remove(number);
-                //Assert
-                Assert.AreEqual(expected, list[0]);
-          
-            }
+        public void DeleteInt5()
+        {
+            //Arrange
+            CustomList<int> list = new CustomList<int>() { 1, 2, 3, 4 };
+            int number = 3;
+            int expected = 1;
+            //Act
+            list.Remove(number);
+            //Assert
+            Assert.AreEqual(expected, list[0]);
+
+        }
         [TestMethod]
         public void DeleteInt11()
         {
@@ -1900,29 +1813,29 @@ namespace UnitTestProject1
             //Assert
             Assert.AreEqual(expected, list[0]);
         }
-             
+
         [TestMethod]
-            public void Count_Int()
-            {
+        public void Count_Int()
+        {
             //Arrange
             CustomList<int> list = new CustomList<int>();
-                list.Add(1);
-                list.Add(1);
-                list.Add(1);
-                list.Add(1);
-                list.Add(1);
-                list.Add(1);
-                list.Add(1);
+            list.Add(1);
+            list.Add(1);
+            list.Add(1);
+            list.Add(1);
+            list.Add(1);
+            list.Add(1);
+            list.Add(1);
 
             //Act
             int expected = 7;
             //Assert
             Assert.AreEqual(expected, list.Count);
-            }
+        }
 
-            [TestMethod]
-            public void Count_String()
-            {
+        [TestMethod]
+        public void Count_String()
+        {
             //Arrange
             CustomList<string> list = new CustomList<string>() { "hi", "later", "peace out", "bye" };
 
@@ -1930,51 +1843,51 @@ namespace UnitTestProject1
             int expected = 4;
             //Assert
             Assert.AreEqual(expected, list.Count);
-            }
+        }
 
-            ////This is the ToString Tests.
+        ////This is the ToString Tests.
 
-            [TestMethod]
-            public void Override_ToString_String()
-            {
-                //Arrange
-                CustomList<string> greetings = new CustomList<string>() { "hi", "later", "peace out", "bye" };
-                string expected = "hi\nlater\npeace out\nbye\n";
-                //Act
-                string result = greetings.ToString();
-                //Assert
-                Assert.AreEqual(expected, result);
-            }
+        [TestMethod]
+        public void Override_ToString_String()
+        {
+            //Arrange
+            CustomList<string> greetings = new CustomList<string>() { "hi", "later", "peace out", "bye" };
+            string expected = "hi\nlater\npeace out\nbye\n";
+            //Act
+            string result = greetings.ToString();
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
 
-            [TestMethod]
-            public void Override_ToString_Int()
-            {
-                //Arrange
-                CustomList<int> numbers = new CustomList<int>() { 1, 3, 5, 3, 2, 5, 2 };
-                string expected = "1\n3\n5\n3\n2\n5\n2\n";
-                //Act
-                string result = numbers.ToString();
-                //Assert
-                Assert.AreEqual(expected, result);
-            }
+        [TestMethod]
+        public void Override_ToString_Int()
+        {
+            //Arrange
+            CustomList<int> numbers = new CustomList<int>() { 1, 3, 5, 3, 2, 5, 2 };
+            string expected = "1\n3\n5\n3\n2\n5\n2\n";
+            //Act
+            string result = numbers.ToString();
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
 
-            
 
-       [TestMethod]
+
+        [TestMethod]
         public void Zip1()
+        {
+            //Arrange
+            CustomList<int> odds = new CustomList<int>() { 1, 3, 5 };
+            CustomList<int> evens = new CustomList<int>() { 2, 4, 6 };
+            CustomList<int> expected = new CustomList<int>() { 1, 2, 3, 4, 5, 6 };
+            //Act
+            CustomList<int> result = odds.ZipIt(evens);
+            //Assert
+            for (int i = 0; i < expected.Count; i++)
             {
-                //Arrange
-                CustomList<int> odds = new CustomList<int>() { 1, 3, 5 };
-                CustomList<int> evens = new CustomList<int>() { 2, 4, 6 };
-                CustomList<int> expected = new CustomList<int>() { 1, 2, 3, 4, 5, 6 };
-                //Act
-                CustomList<int> result = odds.ZipIt(evens);
-                //Assert
-                for (int i = 0; i < expected.Count; i++)
-                {
-                    Assert.AreEqual(expected[i], result[i]);
-                }
+                Assert.AreEqual(expected[i], result[i]);
             }
+        }
 
         [TestMethod]
         public void Zip2()
@@ -1986,10 +1899,10 @@ namespace UnitTestProject1
             //Act
             CustomList<int> result = odds.ZipIt(evens);
             //Assert
-           for (int i = 0; i < expected.Count; i++)
-           {
-               Assert.AreEqual(expected[i], result[i]);
-           }
+            for (int i = 0; i < expected.Count; i++)
+            {
+                Assert.AreEqual(expected[i], result[i]);
+            }
         }
 
         [TestMethod]
@@ -2007,25 +1920,26 @@ namespace UnitTestProject1
                 Assert.AreEqual(expected[i], result[i]);
             }
         }
-            
-
-            [TestMethod]
-            public void OverLoad_Plus_Int()
-            {
-                //Arrange
-                CustomList<int> firstList = new CustomList<int>() { 1, 3, 5 };
-                CustomList<int> secondList = new CustomList<int>() { 2, 4, 6 };
-                CustomList<int> expected = new CustomList<int>() { 1, 3, 5, 2, 4, 6 };
-                //Act
-                CustomList<int> result = firstList + secondList;
-                //Assert
-                for (int i = 0; i < expected.Count; i++)
-                {
-                    Assert.AreEqual(expected[i], result[i]);
-                }
-            }
     }
 }
+
+            //[TestMethod]
+//            public void OverLoad_Plus_Int()
+//            {
+//                //Arrange
+//                CustomList<int> firstList = new CustomList<int>() { 1, 3, 5 };
+//                CustomList<int> secondList = new CustomList<int>() { 2, 4, 6 };
+//                CustomList<int> expected = new CustomList<int>() { 1, 3, 5, 2, 4, 6 };
+//                //Act
+//                CustomList<int> result = firstList + secondList;
+//                //Assert
+//                for (int i = 0; i < expected.Count; i++)
+//                {
+//                    Assert.AreEqual(expected[i], result[i]);
+//                }
+//            }
+//    }
+//}
 
 
 

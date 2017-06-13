@@ -12,7 +12,9 @@ namespace MyList
         public class CustomList<T> : IEnumerable
         {
             private int count;
+
             private int capacity;
+
             public T[] array;
 
             public int Count { get { return count; } }
@@ -21,9 +23,7 @@ namespace MyList
 
             public CustomList()
             {
-                count = 0;
-                capacity = 6;
-                array = new T[capacity];
+                count = 0; capacity = 6; array = new T[capacity];
             }
 
             public void Add(T item)
@@ -35,6 +35,7 @@ namespace MyList
                 array[count] = item;
                 count++;
             }
+
 
             public void Grow()
             {
@@ -55,7 +56,11 @@ namespace MyList
                         if (array[i].Equals(array[count - 1]))
                         { array[i] = default(T); count--; return true; }
                         count--;
+                        
+                        if (array[i].Equals(array[count - 1])) { array[i] = default(T); count--; return true; }
+                        count--;
                         MoveIt(i);
+
                         return true;
                     }
                 }
@@ -82,17 +87,6 @@ namespace MyList
                 }
                 return zippedArray;
             }
-
-            public static CustomList<T> operator +(CustomList<T> firstArray, CustomList<T> secondArray)
-            {
-                CustomList<T> thirdArray = firstArray;
-                for (int i = 0; i < secondArray.count; i++)
-                {
-                    thirdArray.Add(secondArray[i]);
-                }
-                return thirdArray;
-            }
-
             public static CustomList<T> operator -(CustomList<T> firstArray, CustomList<T> secondArray)
             {
                 CustomList<T> tempArray = new CustomList<T>();
@@ -108,14 +102,12 @@ namespace MyList
                         if (tempArray[t].Equals(secondArray[k]))
                         {
                             tempArray.Remove(tempArray[t]);
-                            t--;
-                            break;
+
                         }
                     }
                 }
                 return tempArray;
             }
-
             public override string ToString()
             {
                 StringBuilder stringBuilder = new StringBuilder();
